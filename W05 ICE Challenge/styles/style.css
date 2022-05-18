@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #737373;
+
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.content {
+    padding: 5% 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content-img {
+    width:200px;
+    max-width: 20%;
+    border-radius: 50%;
+    border: 10px solid #444444;
+}
