@@ -1,0 +1,44 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2px;
+}
+
+.grid-container {
+    text-align: center;
+    height: 99vh;
+    display:grid;
+    gap: 3px;
+    grid-template-columns: 1fr 2.5fr 0.8fr;
+    grid-template-rows: 2fr 20fr 5fr;
+}
+
+.grid-element {
+    padding: 10px;
+}
+
+.grid-blue {
+    background-color: blue;
+    grid-column: 1/4;
+
+}
+
+.grid-red {
+    background-color: red;
+    grid-row: 2/4;
+}
+
+.grid-pink {
+    background-color: pink;
+}
+
+.grid-yellow {
+    background-color: yellow;
+}
+
+.grid-black {
+    background-color: black;
+    color:white;
+    grid-column: 2/4;
+
+}
