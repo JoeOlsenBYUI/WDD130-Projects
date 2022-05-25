@@ -10,7 +10,7 @@ html, body {
 }
 
 #cherries {
-    width: auto;
+    width: 100%;
     grid-column: 1/2;
     grid-row:1/2;
 }
@@ -30,7 +30,7 @@ html, body {
     margin:0;
     text-align: center;
 
-    font-size: 10vh;
+    font-size: 7vw;
     background-color: grey;
     grid-column: 2/3;
     grid-row:1/2;
