@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Knewave');
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Poco');
 
+:root {
+    --primary:#183262;
+    --secondary:#0077B6;
+    --accent1: #9BEEFF;
+    --accent2: #fffd81;
+}
+
 #content {
     margin: 0 auto;
     max-width: 1600px;
@@ -24,7 +31,7 @@ nav {
 }
 
 nav a {
-    color:#183262;
+    color: var(--primary);
     text-align: center;
     text-decoration: none;
     padding:35px;
@@ -49,7 +56,7 @@ nav a {
 }
 
 #hero-msg h1, #hero-msg h4 {
-    color: #9BEEFF;
+    color: var(--accent1);
 }
 
 #hero-msg h1, #hero-msg h4 {
@@ -70,24 +77,18 @@ main section img {
 
 #background {
     height: 725px;
-    background-color: #9BEEFF;
+    background-color: var(--accent1);
     grid-column: 1/11;
     grid-row:4/9;
 }
 
-/*
-Primary #183262
-Secondary #0077B6
-Accent 1 #9BEEFF
-Accent 2 #FFB951
-*/
 
 h4 {
-    color:#183262;
+    color: var(--primary);
 }
 
 body {
-    background-color: #9BEEFF;
+    background-color: var(--accent1);
     font-size: 22px;
     font-family: Poco, Helvetica, sans-serif;
     margin: 0;
@@ -104,19 +105,19 @@ h2 {
 }
 
 nav a:hover {
-    background-color:#FFB951;
+    background-color: var(--accent2);
 }
 
 .home-title {
-    color:#183262;
+    color: var(--primary);
     font-family: Knewave, fantasy, script;
     font-size: 2em;
     margin-top: 10px;
 }
 
 .book, .join {
-    background-color: #9BEEFF;
-    color:#0077B6;
+    background-color: var(--accent1);
+    color: var(--secondary);
     text-decoration: none;
     font-size: 18px;
     padding: 15px 30px;
@@ -125,12 +126,12 @@ nav a:hover {
 }
 
 .book:hover, .join:hover {
-    background-color: #9BEEFF;
-    color:#FFB951;
+    background-color: var(--accent1);
+    color: var(--accent2);
 }
 
 .msg {
-    background-color: #9BEEFF;
+    background-color: var(--accent1);
     font-size:1.5em;
     padding: 35px;
     grid-column: 6/10;
@@ -139,18 +140,18 @@ nav a:hover {
 }
 
 .msg h2 {
-    color:#183262;
+    color: var(--primary);
     font-family: Knewave, fantasy, script;
 }
 
 .msg p {
-    color:#0077B6;
+    color: var(--secondary);
     font-size: 0.8em;
     padding-bottom:15px;
 }
 
 footer h3 {
-    color:#183262;
+    color: var(--primary);
 }
 
 footer h3:hover {
@@ -158,16 +159,16 @@ footer h3:hover {
 }
 
 footer a {
-    color:#0077B6;
+    color: var(--secondary);
     text-decoration: none;
 }
 
 footer a:hover {
-    color:#FFB951
+    color: var(--accent2)
 }
 
 footer {
-    background-color: #9BEEFF;
+    background-color: var(--accent1);
     padding: 25px 50px;
     margin-top: 200px;
     display: flex;
@@ -176,7 +177,8 @@ footer {
 }
 
 footer .social img {
-    padding-top: 15px;
+    margin-top: 15px;
+    border-radius: 35%;
 }
 
 .logo, .icon {
@@ -233,6 +235,40 @@ footer .social img {
     width: 100%;
 }
 
+
+
+/* Rivers Page */
+
+.river-main {
+    margin-top: 20px;
+}
+ 
+.rivers-title {
+    color: var(--primary);
+    font-family: Knewave, fantasy, script;
+    letter-spacing: 4px;
+    font-size: 3em;
+    margin-top: 100px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.river-pics {
+    width:300px;
+}
+
+.river-pic-right {
+    float:right;
+    margin-left: 10px
+}
+
+.river-pic-left {
+    float:left;
+    margin-right: 10px
+}
+
+
+/*#region Media Queries */
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
@@ -241,9 +277,13 @@ footer .social img {
     nav, footer {
         flex-direction: column;
     }
+
+    nav {
+        padding-right: 20%;
+    }
     nav a {
         display: block;
-        padding: 15px;
+        padding: 15px; 
     }
     #hero {
         margin-top: 0;
@@ -273,4 +313,19 @@ footer .social img {
     footer {
         margin-top: 25px;
     }
+
+
+
+    .rivers-title {
+        margin-top: -150px;
+    }
 }
+
+@media screen and (max-width: 1760px) {
+    .river-main {
+        margin: 20px 5%;
+    }
+        
+}
+
+/*#endregion */
